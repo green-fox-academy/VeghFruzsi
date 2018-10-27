@@ -21,9 +21,9 @@ int main(int argc, char* args[]) {
     std::cout << "Please, enter the height:"  << std::endl;
     std::cin >> h ;
 
-    volume = l * w * h ;
+    volume = (l * w * h) ;
 
-    area = 2 * (l * w + w * h + l * h);
+    area = 2 * ((l * w) + (w * h) + (l * h));
 
     std::cout << "Cuboid's volume is: " << volume << std::endl;
     std::cout << "Cuboid's area is: " << area << std::endl;
