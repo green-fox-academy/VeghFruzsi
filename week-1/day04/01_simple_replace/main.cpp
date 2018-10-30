@@ -11,6 +11,7 @@ int main(int argc, char* args[])
     std::string example = "In a dishwasher far far away";
     std::string wrongWord = "dishwasher";
     std::string replace = "galaxy";
+
     example.replace(example.find(wrongWord),wrongWord.size(),replace);
     std::cout << example << std::endl;
 
