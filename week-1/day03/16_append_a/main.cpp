@@ -13,6 +13,6 @@ int main(int argc, char* args[]) {
     {
        std:: cout << animals[i] + "a" << std::endl;
     }
-    
+
     return 0;
 }
