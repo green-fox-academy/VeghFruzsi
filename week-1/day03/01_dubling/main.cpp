@@ -6,7 +6,7 @@
 // - Print the result of `doubling(baseNum)`
 
 
-int doubling (int baseNum);
+int doubling (int);
 
 int main(int argc, char* args[]) {
 

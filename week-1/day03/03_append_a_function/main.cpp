@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-std::string appendAFunc (std::string name );
+std::string appendAFunc (std::string typo );
 
 int main(int argc, char* args[]) {
 
@@ -17,7 +17,7 @@ int main(int argc, char* args[]) {
     return 0;
 }
 
-std::string appendAFunc (std::string name ){
-    std::cout << name << " a " << std::endl;
+std::string appendAFunc (std::string typo ){
+    std::cout << typo << "a " << std::endl;
 
 }
