@@ -18,7 +18,7 @@ int main(int argc, char* args[])
     // Create a method called putSaturn() which has list parameter and returns the correct list.
 
     // Expected output: Mercury Venus Earth Mars Jupiter Uranus Neptune Saturn
-    for(const auto& planet : putSaturn(planets))
+    for(const auto planet : putSaturn(planets))
     {
         std::cout << planet << " ";
     }
