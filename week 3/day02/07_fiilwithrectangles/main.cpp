@@ -1,12 +1,11 @@
+
+
 #include <iostream>
 #include <SDL.h>
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
-
-//Draws geometry on the canvas
-void draw();
 
 //Starts up SDL and creates window
 bool init();
@@ -20,15 +19,6 @@ SDL_Window* gWindow = nullptr;
 //The window renderer
 SDL_Renderer* gRenderer = nullptr;
 
-void draw()
-{
-    // Create a line drawing function that takes 2 parameters:
-    // The x and y coordinates of the line's starting point
-    // and draws a line from that point to the center of the canvas.
-    // Draw at least 3 lines with that function. Use loop for that.
-
-}
-
 bool init()
 {
     //Initialize SDL
@@ -39,7 +29,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Line in the middle", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Four rectangles", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
@@ -97,29 +87,35 @@ int main( int argc, char* args[] )
             }
         }
 
-
-//Clear screen
+        //Clear screen
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
 
+        //--------------------------------------------
+        //This is where you can start drawing geometry
+        //--------------------------------------------
+        // Exercise:
+        // draw four different size and color rectangles.
+        // avoid code duplication.
 
-        for ( int i = 0; i <= SCREEN_WIDTH; i += 20) {
-            int x = 0;
-            int y = 0;
-            SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
-            SDL_RenderDrawLine(gRenderer, x+i, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-            x += 30;
-            draw();
+        SDL_SetRenderDrawColor(gRenderer, 0x20, 0x80, 0x70, 0xFF);
+        SDL_Rect fillRect = { 20, 20, 50, 50};
+        SDL_RenderFillRect( gRenderer, &fillRect );
+
+
+        for (int i = 1; i < 4; i++ ) {
+
+
         }
 
 
 
- //Update screen
- SDL_RenderPresent(gRenderer);
-}
+        //Update screen
+        SDL_RenderPresent(gRenderer);
+    }
 
-//Free resources and close SDL
-close();
+    //Free resources and close SDL
+    close();
 
-return 0;
+    return 0;
 }

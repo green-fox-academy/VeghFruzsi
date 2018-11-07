@@ -22,11 +22,11 @@ SDL_Renderer* gRenderer = nullptr;
 
 void draw()
 {
-    // Create a line drawing function that takes 2 parameters:
-    // The x and y coordinates of the line's starting point
-    // and draws a line from that point to the center of the canvas.
-    // Draw at least 3 lines with that function. Use loop for that.
+    // Draw a green 100x100 square to the canvas' center.
 
+    SDL_SetRenderDrawColor(gRenderer, 0x20, 0x80, 0x70, 0xFF);
+    SDL_Rect fillRect = { SCREEN_WIDTH/2-50, SCREEN_HEIGHT/2-50, 100, 100};
+    SDL_RenderFillRect( gRenderer, &fillRect );
 }
 
 bool init()
@@ -39,7 +39,7 @@ bool init()
     }
 
     //Create window
-    gWindow = SDL_CreateWindow( "Line in the middle", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
+    gWindow = SDL_CreateWindow( "Centered square", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN );
     if( gWindow == nullptr )
     {
         std::cout << "Window could not be created! SDL Error: " << SDL_GetError() << std::endl;
@@ -97,29 +97,18 @@ int main( int argc, char* args[] )
             }
         }
 
-
-//Clear screen
+        //Clear screen
         SDL_SetRenderDrawColor(gRenderer, 0xFF, 0xFF, 0xFF, 0xFF);
         SDL_RenderClear(gRenderer);
 
+        draw();
 
-        for ( int i = 0; i <= SCREEN_WIDTH; i += 20) {
-            int x = 0;
-            int y = 0;
-            SDL_SetRenderDrawColor(gRenderer, 0x00, 0x00, 0x00, 0xFF);
-            SDL_RenderDrawLine(gRenderer, x+i, y, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
-            x += 30;
-            draw();
-        }
+        //Update screen
+        SDL_RenderPresent(gRenderer);
+    }
 
+    //Free resources and close SDL
+    close();
 
-
- //Update screen
- SDL_RenderPresent(gRenderer);
-}
-
-//Free resources and close SDL
-close();
-
-return 0;
+    return 0;
 }
