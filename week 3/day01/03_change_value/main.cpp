@@ -17,7 +17,7 @@ int main ()
 
     std::cout << "The memory address of temperaturePtr is " << temperaturePtr << std::endl;
 
-    *temperaturePtr = 52;
+    *temperaturePtr = 52.3;
 
     std::cout << "The value of temperaturePtr is " << *temperaturePtr << std::endl;
 
