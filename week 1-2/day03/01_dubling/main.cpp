@@ -6,7 +6,7 @@
 // - Print the result of `doubling(baseNum)`
 
 
-int doubling (int);
+int doubling(int baseNum);
 
 int main(int argc, char* args[]) {
 
@@ -20,3 +20,11 @@ int doubling(int baseNum)
 {
     return baseNum * 2;
 }
+
+
+
+
+
+
+
+
