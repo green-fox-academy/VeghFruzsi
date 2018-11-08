@@ -9,17 +9,17 @@ int main(int argc, char* args[]) {
     // If the number is more than two it should print: A lot
 
 
-    int number = 0;
-    std::cout << "Enter a number:" << std::endl;
-    std::cin >> number;
+    int x;
+    std::cout << "Please give me a number: " << std::endl;
+    std::cin >> x;
 
-    if ( number <= 0 ){
-            std::cout << "Not enough" << std::endl;
-        } else if(number == 1){
-            std::cout << "One" << std::endl;
-        } else if( number == 2 ){
-            std::cout << "Two" << std::endl;
-        } else {
-            std::cout << "A lot" << std::endl;
-        }
+    if (x <= 0){
+        std::cout << "Not enough" << std::endl;
+    }else if( x == 1 ){
+        std::cout << "One" << std::endl;
+    }else if( x == 2) {
+        std::cout << "Two" << std::endl;
+    }else{
+        std::cout << "A lot" << std::endl;
+    }
 }

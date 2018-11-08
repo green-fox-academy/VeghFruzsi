@@ -7,7 +7,9 @@ int main(int argc, char* args[]) {
     int out = 0;
     // if a is even increment out by one
 
-    std::cout << out << std::endl;
+    if ((int) a % 2 == 0) {
+        std::cout << out << std::endl;
+    }
 
 
     int b = 13;
@@ -16,6 +18,13 @@ int main(int argc, char* args[]) {
     // if less than 10 set out2 to "Less!",
     // if more than 20 set out2 to "More!"
 
+    if (10 < b < 20) {
+        out2 = "Sweet!";
+    } else if (10 > b) {
+        out2 = "Less!";
+    } else if (20 < b) {
+        out2 = "More!";
+    }
     std::cout << out2 << std::endl;
 
 
@@ -28,7 +37,13 @@ int main(int argc, char* args[]) {
     // and isBonus is false decrement c by 1
     // if isBonus is true c should remain the same
 
-    std::cout << c << std::endl;
+    if (credits >= 50 && isBonus == false) {
+        std::cout << c - 2 << std::endl;
+    } else if (credits < 50 && isBonus == false){
+        std::cout << c - 1 << std::endl;
+    } else if (isBonus == true){
+        std::cout << c << std::endl;
+    }
     
     
     int d = 8;
@@ -40,7 +55,14 @@ int main(int argc, char* args[]) {
     // if time is more than 200
     // set out3 to "Time out"
     // otherwise set out3 to "Run Forest Run!"
-    
+
+    if ( d / 4 && time <= 200){
+        out3 = "check";
+    } else if (time > 200){
+        out3 = "Time out";
+    } else {
+        out3 = "Run Forest Run!";
+    }
     std::cout << out3 << std::endl;
 
     return 0;

@@ -18,25 +18,20 @@ int main( int argc, char* args[]) {
     // If no girls are coming, regardless the count of the people
 
 
-    int girls = 0;
-    int boys = 0;
-
-    std::cout << "How many girls come to your party?" << std::endl;
+    int girls;
+    int boys;
+    std::cout << "Please give me the numbers of the girls and the boys" << std::endl;
     std::cin >> girls;
-    std::cout << "How many boys come to your party?" << std::endl;
     std::cin >> boys;
 
-    if (girls == boys && ((boys + girls) >= 20)){
-        std::cout << "The Party is excellent!" << std::endl;
-
-    } else if ((girls % boys != 0) && (girls + boys) >= 20 ){
+    if (girls == boys && (girls + boys) >= 20){
+        std::cout << "The party is excellent!" << std::endl;
+    } else if ((girls + boys) >= 20 && (girls % boys) != 0 ){
         std::cout << "Quite cool party!" << std::endl;
-
-    } else if ( (boys + girls) < 20){
+    } else if (girls == 0) {
+        std::cout << "Sausage party" << std::endl;
+    } else if ((girls + boys) < 20 ) {
         std::cout << "Average party..." << std::endl;
-
-    } else if (girls == 0){
-        std::cout << "Sausage party..." << std::endl;
     }
 
     return 0;

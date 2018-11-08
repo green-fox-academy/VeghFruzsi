@@ -103,8 +103,18 @@ int main( int argc, char* args[] )
         SDL_RenderFillRect( gRenderer, &fillRect );
 
 
-        for (int i = 1; i < 4; i++ ) {
-
+        int x = 20;
+        int y = 20;
+        int w = 0;
+        int z = 0;
+        for (int i = 1; i < 5; i++ ) {
+            SDL_SetRenderDrawColor(gRenderer, 0x20+x, 0x80+y, 0x70+w, 0xFF);
+            SDL_Rect fillRect = { x+w, y+w, w+z, z+z};
+            SDL_RenderFillRect( gRenderer, &fillRect );
+            x += 40;
+            y += 40;
+            w += 30;
+            z += 30;
 
         }
 
