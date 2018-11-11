@@ -1,7 +1,10 @@
 #include <iostream>
 #include <string>
 
-std::string greet(std::string al);
+
+std::string greet (std::string al){
+    std::cout << "Greetings dear " << al << std::endl;
+}
 
 int main(int argc, char* args[]) {
 
@@ -10,12 +13,9 @@ int main(int argc, char* args[]) {
     // - Greeting is printing e.g. `Greetings dear, Greenfox`
     // - Greet `al`
 
-    std::string al = "Greenfox";
-    greet(al);
+   std::string al = "Greenfox";
 
-    return 0;
-}
+   greet (al);
 
-std::string greet(std::string al){
-    std::cout << "Greeting dear " << al << std::endl;
+   return 0;
 }

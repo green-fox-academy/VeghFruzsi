@@ -2,7 +2,13 @@
 #include <iostream>
 #include <string>
 
-int sum (int numbers);
+int factorio (int numbers){
+    int j = 1;
+    for (int i = 1; i <= numbers ; ++i) {
+        j = j * i;
+    }
+    return j;
+}
 
 int main(int argc, char* args[]) {
 
@@ -10,20 +16,12 @@ int main(int argc, char* args[]) {
     //   that returns it's input's factorial
 
     int numbers;
-    std::cout<< "Enter an integer: " << std::endl;
-    std::cin>> numbers;
+    std::cout << "Enter a number: " << std::endl;
+    std::cin >> numbers;
 
-    std::cout << sum(numbers)<< std::endl;
+    int factorio(int numbers);
 
+    std::cout << "The factorial is " << factorio(numbers);
+    
     return 0;
-}
-
-int sum (int numbers) {
-    int y = 1;
-    for (int x = 1; x <= numbers; x++) {
-        y = y * x;
-
-    }
-
-    return y;
 }
