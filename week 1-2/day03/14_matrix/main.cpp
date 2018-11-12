@@ -14,7 +14,43 @@ int main(int argc, char* args[]) {
     //   0 0 0 1
     //
     // - Print this two dimensional array to the output
-    int const input = 4;
+
+
+    int x = 4;
+    int matrix [x][x] = {};
+
+    for ( int i = 0; i <= x; i++ )
+    {
+        for (int j = 0; j <= x; j++ )
+        {
+            if (i == j)
+            {
+                std::cout << "1";
+            } else {
+                std::cout << "0";
+            }
+        }
+        std::cout << std::endl;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*int const input = 4;
     int matrix[input][input];
 
     for (int i = 0; i < input; ++i)
@@ -32,20 +68,8 @@ int main(int argc, char* args[]) {
             std::cout << matrix[i][j];
         }
         std::cout << std::endl;
-    }
+    }*/
 
     return 0;
 
 }
-
-/*int table[2][3] = {5, 4, 6, 5, 7, 1};
-
-for(int i = 0;i < sizeof(table) / sizeof(table[0]); ++i)
-{
-for(int j = 0; j < sizeof(table[i]) / sizeof(table[i][0]); ++j)
-{
-std::cout << table[i][j] << " ";
-}
-
-std::cout << std::endl;
-}*/

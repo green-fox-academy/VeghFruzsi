@@ -7,13 +7,15 @@ int main(int argc, char* args[]) {
     //   with the following content: `[3, 4, 5, 6, 7]`
     // - Print the sum of the elements in `ai`
 
-    int ai [] = {3, 4, 5, 6, 7};
-    int sum = 0;
+   int ai [] ={3, 4, 5, 6, 7};
+   int sum = 0;
 
-    for (int i = 0; i < sizeof(ai)/sizeof(ai[0]); i++) {
-            sum = sum + ai [i];
-    }
-    std::cout << sum << std::endl;
+   for ( int x = 0; x < sizeof(ai) / sizeof(ai[0]); x++)
+   {
+     sum = sum + ai[x];
+   }
+   std::cout << "Elements of array's sum is: " << sum << std::endl;
 
-    return 0;
+   return 0;
+
 }

@@ -1,0 +1,4 @@
+Haiku
+Kezek mozdulnak
+és indulnak és lelnek
+egy másik kezet.

@@ -7,10 +7,19 @@ int main(int argc, char* args[]) {
     //   with the following content: `[3, 4, 5, 6, 7]`
     // - Double all the values in the array
 
+
     int numList[] = {3, 4, 5, 6, 7};
-    for(int i = 0; i < sizeof(numList)/sizeof(numList[0]); i++) {
-        std::cout << numList[i] * 2 << std::endl;
+
+   /* for ( int x = 0; x < sizeof(numList) / sizeof(numList[0]); ++x)
+    {
+        std::cout << numList[x] * 2 << std::endl;
+    }*/
+
+    for ( int x : numList)
+    {
+        std::cout << x * 2 << std::endl;
     }
+
     return 0;
 }
 

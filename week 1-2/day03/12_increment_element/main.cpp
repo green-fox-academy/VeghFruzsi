@@ -9,9 +9,9 @@ int main(int argc, char* args[]) {
     // - Print the third element
 
     int t [] = {1, 2, 3, 4, 5};
-    t[2] = t [2] + 1;
+    t[2] = t[2] + 1;
 
-    std::cout << t[2] << std::endl;
+    std::cout << t [2] << std::endl;
 
     return 0;
 }

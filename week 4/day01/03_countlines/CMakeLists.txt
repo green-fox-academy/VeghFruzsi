@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
-project(08_third)
+project(03_countlines)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(08_third main.cpp)
+add_executable(03_countlines main.cpp)
