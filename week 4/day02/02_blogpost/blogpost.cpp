@@ -1,24 +1,28 @@
-#include "postit.h"
+#include "blogpost.h"
 
-Postit::Postit (std::string backgroundColor, std::string text, std::string textColor){
-    _backgroundColor = backgroundColor;
+Blogpost::Blogpost(std::string authorName, std::string title, std::string text, std::string publicationDate) {
+    _authorName = authorName;
+    _title = title;
     _text = text;
-    _textColor = textColor;
+    _publicationDate = publicationDate;
 }
 
-Postit::~Postit (){
-    std::cout << "A postit is destructed:" << _text << std::endl;
+Blogpost::~Blogpost() {
+    std::cout << "A blogpost is destructed:" << _title << std::endl;
 }
 
-std::string Postit::getBackgroundColor(){
-    return _backgroundColor;
+std::string Blogpost::getAuthorName (){
+    return _authorName;
 }
 
-std::string Postit::getText(){
+std::string Blogpost::getTitle() {
+    return _title;
+}
+
+std::string Blogpost::getText(){
     return _text;
 }
 
-std::string Postit::getTextColor(){
-    return _textColor;
+std::string Blogpost::getPublicationDate() {
+    return _publicationDate;
 }
-
