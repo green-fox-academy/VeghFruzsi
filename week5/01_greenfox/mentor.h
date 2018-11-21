@@ -18,6 +18,7 @@ public:
     void introduce();
 
 private:
+    Level _level;
 
 };
 

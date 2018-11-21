@@ -13,8 +13,8 @@ public:
     Person();
     Person(const std::string name, int age, const Gender gender);
 
-    void introduce();
-    void getGoal();
+    virtual void introduce();
+    virtual void getGoal();
 
 protected:
     std::string _name;

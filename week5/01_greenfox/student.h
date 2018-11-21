@@ -9,11 +9,10 @@ public:
 
     Student();
 
-    Student(std::string name, int age, Gender gender,
-            std::string previousOrganization);
+    Student(std::string name, int age, Gender gender, std::string previousOrganization);
 
-    void getGoal();
-    void introduce();
+    void getGoal() override;
+    void introduce() override;
     int skipDays(int numberOfDays);
 
 private:

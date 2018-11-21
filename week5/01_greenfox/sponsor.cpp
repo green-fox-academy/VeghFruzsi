@@ -1,7 +1,13 @@
 #include "sponsor.h"
 #include <iostream>
 
-Sponsor::Sponsor();
+Sponsor::Sponsor(){
+    _name = "Jane Doe";
+    _age = 20;
+    _gender = Gender::FEMALE;
+    _company = "Google";
+    _hiredStudents = 0;
+}
 
 Sponsor::Sponsor(std::string name, int age, Gender gender, std::string company) {
     _name = name;
@@ -16,9 +22,13 @@ void Sponsor::getGoal() {
 }
 
 void Sponsor::introduce() {
-    std::cout << "Hi, I'm " << _name << ", a " << _age << " year old " << _gender
-              << " who represents " << _company << " and hired " << _hiredStudents
-              << " so far." << std::endl;
+    if (_gender == Gender::FEMALE) {
+        std::cout << "Hi, I'm " << _name << ", a " << _age << " year old female who represents " << _company
+                  << " and hired " << _hiredStudents << " students so far." << std::endl;
+    } else {
+        std::cout << "Hi, I'm " << _name << ", a " << _age << " year old male who represents " << _company
+                  << " and hired " << _hiredStudents << " students so far." << std::endl;
+    }
 }
 
 void Sponsor::hire() {
