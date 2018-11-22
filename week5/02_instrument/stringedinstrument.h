@@ -1,0 +1,14 @@
+//
+// Created by Fruzsi on 2018.11.21..
+//
+
+#ifndef INC_02_INSTRUMENT_STRINGEDINSTRUMENT_H
+#define INC_02_INSTRUMENT_STRINGEDINSTRUMENT_H
+
+
+class stringedinstrument {
+
+};
+
+
+#endif //INC_02_INSTRUMENT_STRINGEDINSTRUMENT_H
