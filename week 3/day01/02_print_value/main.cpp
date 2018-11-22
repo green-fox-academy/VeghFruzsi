@@ -17,6 +17,6 @@ int main() {
     std::cout << "The memory address of age is " << &age << std::endl;
     std::cout << "The memory address of agePtr is " << agePtr << std::endl;
     std::cout << "The value address of agePtr is " << *agePtr << std::endl;
-    
+
     return 0;
 }
