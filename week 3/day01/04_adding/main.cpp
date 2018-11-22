@@ -22,6 +22,6 @@ int main() {
     std::cout << "The value of aPtr is " << *aPtr << std::endl;
     std::cout << "The value of bPtr is " << *bPtr << std::endl;
     std::cout << "The sum of a + b is " << *aPtr + *bPtr << std::endl;
-    
+
     return 0;
 }
