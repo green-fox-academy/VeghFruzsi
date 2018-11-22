@@ -18,6 +18,6 @@ int main() {
     *temperaturePtr = 43.7;
 
     std::cout << "The value of temperaturePtr is " << *temperaturePtr << std::endl;
-    
+
     return 0;
 }

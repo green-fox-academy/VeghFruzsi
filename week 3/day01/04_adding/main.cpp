@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     // Add two numbers using pointers
 
     int a = 20;
@@ -10,8 +9,8 @@ int main()
     int *bPtr = nullptr;
 
     std::cout << "The value of a is " << a << std::endl;
-    std::cout << "The memory address of a is " << &a << std::endl;
     std::cout << "The value of b is " << b << std::endl;
+    std::cout << "The memory address of a is " << &a << std::endl;
     std::cout << "The memory address of b is " << &b << std::endl;
 
     std::cout << "The value of aPtr is " << aPtr << std::endl;
@@ -22,8 +21,7 @@ int main()
 
     std::cout << "The value of aPtr is " << *aPtr << std::endl;
     std::cout << "The value of bPtr is " << *bPtr << std::endl;
-    std::cout << "The sum is " << *aPtr + *bPtr << std::endl;
-
-
+    std::cout << "The sum of a + b is " << *aPtr + *bPtr << std::endl;
+    
     return 0;
 }
