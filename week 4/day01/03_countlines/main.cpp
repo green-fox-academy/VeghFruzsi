@@ -3,34 +3,34 @@
 #include <sstream>
 #include <string>
 
-void cloudyTiredDays(){
-    std::ifstream dawnFile("../dawn.txt");
-
-    if (dawnFile.is_open()){
-        std::cout << ":)" << std::endl;
-    }else{
-        std::cout << ":(" << std::endl;
-    }
-
-    int numberOfLines = 0;
-    std::ifstream things("../dawn.txt");
-    std::string numberString;
-
-    while(std::getline(things, numberString)) {
-        ++numberOfLines;
-    }
-    std::cout << numberOfLines << std::endl;
-}
+int linesInMyDawnFile(std::string);
 
 
-
-int main () {
+int main() {
     // Write a function that takes a filename as string,
     // then returns the number of lines the file contains.
     // It should return zero if it can't open the file
 
-
-    cloudyTiredDays();
+    std::string fileName = "../dawn.text";
+    std::cout << linesInMyDawnFile(fileName) << std::endl;
 
     return 0;
+}
+
+int linesInMyDawnFile(std::string) {
+    std::ifstream dawnFile("../dawn.txt");
+
+    if (dawnFile.is_open()) {
+        std::cout << "OPEN" << std::endl;
+    } else {
+        std::cout << "Your file is CLOSED." << std::endl;
+    }
+
+    int numberOfLines = 0;
+    std::string numberOfString;
+
+    while (std::getline(dawnFile, numberOfString)) {
+        numberOfLines++;
+    }
+    return numberOfLines;
 }

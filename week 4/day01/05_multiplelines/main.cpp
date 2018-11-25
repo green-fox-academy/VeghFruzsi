@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-int createMultiLines ();
+int createMultiLines(std::string path, std::string word, int number);
 
 // Create a function that takes 3 parameters: a path, a word and a number,
 // than it should write to a file.
@@ -14,33 +14,27 @@ int createMultiLines ();
 
 int main() {
 
-int createMultiLines (){
-
-
+    std::string path = "mlines.txt";
+    std::string word;
+    int number;
+    createMultiLines(path, word, number);
+    return 0;
 }
 
-//write plus lines
-    std::ofstream myFile;
-    myFile.exceptions(std::ofstream::failbit | std::ofstream::badbit);
-    try {
-        myFile.open("../my-file.txt");
-        std::string str = "Fruzsina Zsofia Vegh";
-        myFile << str;
-        myFile.close();
-    } catch (std::ofstream::failure& e) {
-        std::cout << e.what() << std::endl;
+int createMultiLines(std::string path, std::string word, int number) {
+    std::ofstream myFile("../" + path);
+    std::cout << "Please give me a word: " << std::endl;
+    std::cin >> word;
+    std::cout << "Please give me a number: " << std::endl;
+    std::cin >> number;
+
+    if (myFile.is_open()) {
+        for (int i = 0; i < number; ++i) {
+            myFile << word << '\n';
+        }
+    } else {
+        std::cout << "We can't open the file." << std::endl;
     }
-
-//countlines
-    int numberOfLines = 0;
-    std::ifstream things("../dawn.txt");
-    std::string numberString;
-
-    while(std::getline(things, numberString)) {
-        ++numberOfLines;
-    }
-    std::cout << numberOfLines << std::endl;
-
-
+    myFile.close();
     return 0;
 }

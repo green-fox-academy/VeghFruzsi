@@ -8,14 +8,13 @@ int main() {
 
 
     std::ofstream myFile;
-    myFile.exceptions(std::ofstream::failbit | std::ofstream::badbit);
-    try {
-        myFile.open("../my-file.txt");
-        std::string str = "Fruzsina Zsofia Vegh";
-        myFile << str;
-        myFile.close();
-    } catch (std::ofstream::failure& e) {
-        std::cout << e.what() << std::endl;
-    }
+   // myFile.exceptions(std::ofstream::failbit | std::ofstream::badbit);
+
+    myFile.open("../my-file.txt");
+    std::string str = "VFZsFV";
+    myFile << str;
+
+    myFile.close();
+
     return 0;
 }
