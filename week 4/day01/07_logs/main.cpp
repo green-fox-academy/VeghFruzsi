@@ -16,7 +16,6 @@ int main() {
     logFiles("../log.txt", result);
 }
 
-
 std::vector<std::string> logFiles(std::string basicFile, float ratio) {
 
     std::ifstream myLogs;
