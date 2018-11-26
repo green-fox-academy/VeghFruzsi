@@ -4,10 +4,12 @@
 
 
 
-std::string appendA (std::string animals );
-std::string appendAFunc (std::string typo );
-
-
+std::vector<std::string> appendA(std::vector<std::string> &animals){
+    for(int i = 0; i < animals.size(); i++){
+        animals[i]+= 'a';
+    }
+    return animals;
+}
 
 int main(int argc, char* args[])
 {
@@ -16,12 +18,13 @@ int main(int argc, char* args[])
 
 
     std::vector<std::string> animals = {"bo", "anacond", "koal", "pand", "zebr"};
-    std::string appendA (animals);
+
+    for(const auto& animal : appendA(animals))
+    {
+        std::cout << animal << " ";
+    }
 
     return 0;
 }
 
 
-std::string appendA (std::string animals ){
-    std::cout << animals << "a " << std::endl;
-}

@@ -3,6 +3,11 @@
 #include <vector>
 
 std::string containsSeven(const std::vector<int>& numbers) {
+    for(int i = 0; i < numbers.size(); i++){
+        if(numbers[i] == 7)
+            return "Hoorray";
+    }
+    return "Noooo!";
 }
 
 std::string containsSeven_stdfind(const std::vector<int>& numbers)
@@ -13,8 +18,9 @@ std::string containsSeven_stdfind(const std::vector<int>& numbers)
     else{
         return "Noooo!";
     }
-
 }
+
+
 
 int main(int argc, char* args[])
 {
@@ -31,3 +37,4 @@ int main(int argc, char* args[])
 
     return 0;
 }
+
