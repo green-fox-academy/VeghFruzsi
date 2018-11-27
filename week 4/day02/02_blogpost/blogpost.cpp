@@ -8,7 +8,7 @@ Blogpost::Blogpost(std::string authorName, std::string title, std::string text, 
 }
 
 Blogpost::~Blogpost() {
-    std::cout << "A blogpost is destructed:" << _title << std::endl;
+    std::cout << "A blogpost is destructed: " << _title << std::endl;
 }
 
 std::string Blogpost::getAuthorName (){
