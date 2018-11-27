@@ -1,24 +1,24 @@
 #include "postit.h"
 
-Postit::Postit (std::string backgroundColor, std::string text, std::string textColor){
+PostIt::PostIt(std::string backgroundColor, std::string text, std::string textColor) {
     _backgroundColor = backgroundColor;
     _text = text;
     _textColor = textColor;
 }
 
-Postit::~Postit (){
-    std::cout << "A postit is destructed:" << _text << std::endl;
+PostIt::~PostIt() {
+    std::cout << _backgroundColor << " post-it says goodbye!" << std::endl;
 }
 
-std::string Postit::getBackgroundColor(){
+std::string PostIt::getBackgroundColor() {
     return _backgroundColor;
 }
 
-std::string Postit::getText(){
+std::string PostIt::getText() {
     return _text;
 }
 
-std::string Postit::getTextColor(){
+std::string PostIt::getTextColor() {
     return _textColor;
 }
 
