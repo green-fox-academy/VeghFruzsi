@@ -2,8 +2,7 @@
 
 #include "fleet.h"
 
-int main(int argc, char* args[])
-{
+int main(int argc, char *args[]) {
     Fleet fleet;
     // Create a fleet of things to have this output:
     // 1. [ ] Get milk
@@ -11,10 +10,10 @@ int main(int argc, char* args[])
     // 3. [x] Stand up
     // 4. [x] Eat lunch
 
-    Thing x ("Get milk");
-    Thing y ("Remove the obstacles");
-    Thing z ("Stand up");
-    Thing w ("Eat lunch");
+    Thing x("Get milk");
+    Thing y("Remove the obstacles");
+    Thing z("Stand up");
+    Thing w("Eat lunch");
 
     z.complete();
     w.complete();
@@ -26,5 +25,4 @@ int main(int argc, char* args[])
 
     std::cout << fleet.toString() << std::endl;
     return 0;
-
 }
