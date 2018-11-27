@@ -1,8 +1,6 @@
 #ifndef INC_04_SHARPIE_SHARPIE_H
 #define INC_04_SHARPIE_SHARPIE_H
-
 #include <iostream>
-
 
 class Sharpie {
 

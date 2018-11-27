@@ -1,18 +1,15 @@
 #include <iostream>
 #include "counter.h"
 
-void checkValue(const std::string& name, int expected, int actual)
-{
-    if(expected != actual) {
+void checkValue(const std::string &name, int expected, int actual) {
+    if (expected != actual) {
         std::cout << name << "Failed! Expected: " << expected << " Actual: " << actual << std::endl;
-    }
-    else {
+    } else {
         std::cout << name << "Passed!" << std::endl;
     }
 }
 
-int main(int argc, char* args[])
-{
+int main(int argc, char *args[]) {
     Counter c;
     checkValue("getZero", 0, c.get());
 

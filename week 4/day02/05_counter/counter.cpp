@@ -11,10 +11,10 @@ Counter::Counter(int number) {
 }
 
 void Counter::add(int number) {
-    _number+=number;
+    _number += number;
 }
 
-void Counter::add(){
+void Counter::add() {
     _number++;
 }
 

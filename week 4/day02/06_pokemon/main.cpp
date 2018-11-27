@@ -1,11 +1,8 @@
 #include <iostream>
 #include <vector>
-
 #include "pokemon.h"
 
-
-std::vector<Pokemon> initializePokemons()
-{
+std::vector<Pokemon> initializePokemons() {
     std::vector<Pokemon> pokemons;
 
     pokemons.push_back(Pokemon("Balbasaur", "leaf", "water"));
@@ -17,9 +14,8 @@ std::vector<Pokemon> initializePokemons()
     return pokemons;
 }
 
-int main(int argc, char* args[])
-{
-   std::vector<Pokemon> pokemonOfAsh = initializePokemons();
+int main(int argc, char *args[]) {
+    std::vector<Pokemon> pokemonOfAsh = initializePokemons();
 
     // Every pokemon has a name and a type.
     // Certain types are effective against others, e.g. water is effective against fire.
@@ -31,16 +27,14 @@ int main(int argc, char* args[])
 
     // Which pokemon should Ash use?
 
-
     std::string name = "";
 
-    for ( int i =0; i < initializePokemons().size(); i++ ){
-        if(initializePokemons()[i].isEffectiveAgainst(wildPokemon)){
+    for (int i = 0; i < initializePokemons().size(); i++) {
+        if (initializePokemons()[i].isEffectiveAgainst(wildPokemon)) {
 
             name = initializePokemons()[i]._name;
             std::cout << "I choose You, " << name << std::endl;
         }
     }
-
     return 0;
 }

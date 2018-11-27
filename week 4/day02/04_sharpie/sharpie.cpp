@@ -19,5 +19,5 @@ float Sharpie::getInkAmount(){
 }
 
 void Sharpie::use() {
-    _inkAmount-=10;
+    _inkAmount-=12;
 }

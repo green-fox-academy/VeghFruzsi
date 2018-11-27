@@ -15,8 +15,6 @@ public:
 private:
     int _initNum;
     int _number;
-
 };
-
 
 #endif //INC_05_COUNTER_COUNTER_H
