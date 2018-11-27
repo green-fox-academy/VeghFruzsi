@@ -1,9 +1,7 @@
 #include "animal.h"
 #include <iostream>
 
-
-
-Animal::Animal(){
+Animal::Animal() {
     _hunger = 50;
     _thirst = 50;
 }
@@ -28,3 +26,4 @@ void Animal::play() {
     _hunger++;
     _thirst++;
 }
+
