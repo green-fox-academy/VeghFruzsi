@@ -1,13 +1,15 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
-
 #ifndef INC_02_INSTRUMENT_ELECTRICGUITAR_H
 #define INC_02_INSTRUMENT_ELECTRICGUITAR_H
 
 
-class electricguitar {
+#include "stringedinstrument.h"
 
+class ElectricGuitar : public StringedInstrument {
+public:
+    ElectricGuitar();
+    explicit ElectricGuitar(int numberOfStrings);
+    void play() const;
+    void sound() const;
 };
 
 

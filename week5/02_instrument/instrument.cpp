@@ -1,5 +1,3 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
-
 #include "instrument.h"
+
+Instrument::Instrument(std::string name) : _name(name){};

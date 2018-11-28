@@ -1,14 +1,15 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
-
 #ifndef INC_02_INSTRUMENT_VIOLIN_H
 #define INC_02_INSTRUMENT_VIOLIN_H
 
+#include "stringedinstrument.h"
 
-class violin {
+class Violin : public StringedInstrument
+{
 
+public:
+    Violin();
+    void play() const;
+    void sound() const;
 };
-
 
 #endif //INC_02_INSTRUMENT_VIOLIN_H

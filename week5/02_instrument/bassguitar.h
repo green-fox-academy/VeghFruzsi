@@ -1,14 +1,16 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
-
 #ifndef INC_02_INSTRUMENT_BASSGUITAR_H
 #define INC_02_INSTRUMENT_BASSGUITAR_H
 
+#include "stringedinstrument.h"
 
-class bassguitar {
+class BassGuitar : public StringedInstrument
+{
+public:
+    BassGuitar();
+    BassGuitar(int numberOfStrings);
+    void play() const;
+    void sound() const;
 
 };
-
 
 #endif //INC_02_INSTRUMENT_BASSGUITAR_H

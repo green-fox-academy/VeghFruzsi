@@ -1,5 +1,4 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
-
 #include "stringedinstrument.h"
+#include "instrument.h"
+
+StringedInstrument::StringedInstrument(std::string name, int numberOfStrings) : Instrument(name), _numberOfStrings(numberOfStrings) {};
