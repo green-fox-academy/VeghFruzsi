@@ -11,15 +11,15 @@ class Cohort {
 
 public:
     Cohort(std::string name);
-    void addStudent(Student*);
-    void addMentor(Mentor*);
+
+    void addStudent(Student *);
+    void addMentor(Mentor *);
     void info();
 
 private:
     std::string _name;
-    std::vector<Student*> _students;
-    std::vector<Mentor*> _mentors;
+    std::vector<Student *> _students;
+    std::vector<Mentor *> _mentors;
 };
-
 
 #endif //INC_01_GREENFOX_COHORT_H

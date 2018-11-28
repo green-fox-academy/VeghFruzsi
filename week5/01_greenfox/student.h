@@ -20,5 +20,4 @@ private:
     int _skippedDays;
 };
 
-
 #endif //INC_01_GREENFOX_STUDENT_H

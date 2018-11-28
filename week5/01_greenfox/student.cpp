@@ -3,7 +3,7 @@
 
 Student::Student() {
     _name = "Jane Doe";
-    _age = 20;
+    _age = 30;
     _gender = Gender::FEMALE;
     _previousOrganization = "The School of Life";
     _skippedDays = 0;
@@ -23,11 +23,11 @@ void Student::getGoal() {
 
 void Student::introduce() {
     if (_gender == Gender::FEMALE) {
-        std::cout << "Hi, I'm " << _name << " a " << _age << " year old woman from "
+        std::cout << "Hi, I'm " << _name << " a " << _age << " year old female from "
                   << _previousOrganization << " who skipped " << _skippedDays <<
                   " days from the course already." << std::endl;
     } else {
-        std::cout << "Hi, I'm " << _name << "a" << _age << " year old man from "
+        std::cout << "Hi, I'm " << _name << " a " << _age << " year old man from "
                   << _previousOrganization << " who skipped " << _skippedDays <<
                   " days from the course already." << std::endl;
     }
@@ -36,3 +36,4 @@ void Student::introduce() {
 int Student::skipDays(int numberOfDays) {
     _skippedDays += numberOfDays;
 }
+

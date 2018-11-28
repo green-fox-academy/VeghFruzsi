@@ -6,19 +6,18 @@
 #include "sponsor.h"
 #include "cohort.h"
 
-int main()
-{
-    std::vector<Person*> people;
+int main() {
+    std::vector<Person *> people;
 
     Person mark("Mark", 46, Gender::MALE);
     people.push_back(&mark);
     Person jane;
     people.push_back(&jane);
-    Student john("John Doe", 20, Gender::FEMALE, "BME");
+    Student john("John Doe", 20, Gender::MALE, "BME");
     people.push_back(&john);
     Student student;
     people.push_back(&student);
-    Mentor gandhi("Gandhi", 148, Gender::FEMALE, Level::SENIOR);
+    Mentor gandhi("Gandhi", 148, Gender::MALE, Level::SENIOR);
     people.push_back(&gandhi);
     Mentor mentor;
     people.push_back(&mentor);
@@ -37,7 +36,7 @@ int main()
         sponsor.hire();
     }
 
-    for(Person* person : people) {
+    for (Person *person : people) {
         person->introduce();
         person->getGoal();
     }

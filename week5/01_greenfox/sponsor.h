@@ -8,15 +8,11 @@ class Sponsor : public Person {
 
 public:
     Sponsor();
-
     Sponsor(std::string name, int age, Gender gender, std::string company);
 
     void getGoal();
-
     void introduce();
-
     void hire();
-
 
 private:
     std::string _company;

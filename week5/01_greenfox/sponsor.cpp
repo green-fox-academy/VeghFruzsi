@@ -1,9 +1,9 @@
 #include "sponsor.h"
 #include <iostream>
 
-Sponsor::Sponsor(){
+Sponsor::Sponsor() {
     _name = "Jane Doe";
-    _age = 20;
+    _age = 30;
     _gender = Gender::FEMALE;
     _company = "Google";
     _hiredStudents = 0;
@@ -34,3 +34,4 @@ void Sponsor::introduce() {
 void Sponsor::hire() {
     _hiredStudents++;
 }
+
