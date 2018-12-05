@@ -1,5 +1,9 @@
-//
-// Created by Fruzsi on 2018.11.21..
-//
+#include <gtest/gtest.h>
+#include <chrono>
+#include "apple.h"
 
-#include "appletest.h"
+using namespace std::chrono;
+
+TEST(apple_check, test_apple) {
+    EXPECT_EQ(getApple(), "car");
+}
