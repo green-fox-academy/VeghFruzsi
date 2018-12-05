@@ -12,6 +12,7 @@ public:
     float getInkAmount();
 
     void use();
+    void fill();
 
 private:
     std::string _color;

@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 class Thing {
 public:
     Thing(const std::string &name);

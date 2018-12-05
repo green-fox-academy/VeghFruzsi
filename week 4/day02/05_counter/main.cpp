@@ -5,7 +5,7 @@ void checkValue(const std::string &name, int expected, int actual) {
     if (expected != actual) {
         std::cout << name << "Failed! Expected: " << expected << " Actual: " << actual << std::endl;
     } else {
-        std::cout << name << "Passed!" << std::endl;
+        std::cout << name << " Passed!" << std::endl;
     }
 }
 

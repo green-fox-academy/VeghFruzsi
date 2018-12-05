@@ -12,4 +12,6 @@ int main() {
     std::cout << "Ink amount is: " << sharpie.getInkAmount() << std::endl;
     sharpie.use();
     std::cout << "Ink amount is: " << sharpie.getInkAmount() << std::endl;
+    sharpie.fill();
+    std::cout << "Ink amount is: " << sharpie.getInkAmount() << std::endl;
 }
