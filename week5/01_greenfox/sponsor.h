@@ -10,8 +10,8 @@ public:
     Sponsor();
     Sponsor(std::string name, int age, Gender gender, std::string company);
 
-    void getGoal();
-    void introduce();
+    void getGoal() override;
+    void introduce() override;
     void hire();
 
 private:

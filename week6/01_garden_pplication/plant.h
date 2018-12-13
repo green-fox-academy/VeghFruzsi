@@ -10,11 +10,8 @@ public:
     Plant(float waterAmount, std::string color);
 
     virtual void watering(float waterAmount) = 0;
-
     bool getNeedsWater();
-
     float getWaterAmount();
-
     std::string getColor();
 
 protected:

@@ -5,5 +5,6 @@
 using namespace std::chrono;
 
 TEST(apple_check, test_apple) {
+    Apple apple;
     EXPECT_EQ(getApple(), "car");
 }

@@ -4,7 +4,11 @@
 
 #include <string>
 
-virtual std::string getApple();
+class Apple{
+    virtual std::string getApple();
+}
+
+
 
 
 #endif //INC_03_APPLES_APPLE_H

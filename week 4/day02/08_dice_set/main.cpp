@@ -9,7 +9,7 @@ int main(int argc, char* args[])
     // Check the current rolled numbers with getCurrent()
     // You can reroll with roll()
     // Your task is to roll the dices until all of the dices are 6
-    
+
     DiceSet diceSet;
     diceSet.roll();
     int counter = 0;

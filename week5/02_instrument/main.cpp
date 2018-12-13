@@ -7,7 +7,6 @@
 
 int main( int argc, char* args[] )
 {
-
     std::cout << "Test 1, create Electric Guitar, Bass Guitar and Violin with default strings." << std::endl;
     ElectricGuitar guitar;
     BassGuitar bassGuitar;

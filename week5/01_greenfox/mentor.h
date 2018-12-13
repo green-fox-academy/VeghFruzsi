@@ -15,8 +15,8 @@ public:
     Mentor();
     Mentor(std::string name, int age, Gender gender, Level level);
 
-    void getGoal();
-    void introduce();
+    void getGoal() override;
+    void introduce() override;
 
 private:
     Level _level;

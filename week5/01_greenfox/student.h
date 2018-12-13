@@ -8,7 +8,6 @@ class Student : public Person {
 public:
 
     Student();
-
     Student(std::string name, int age, Gender gender, std::string previousOrganization);
 
     void getGoal() override;
