@@ -25,16 +25,14 @@ int main()
     //
     // the function should return: -1, because there is no 'a' in the word "embedded"
 //
-
-
     char string[] = "embedded";
     char *character;
-    printf("Looking for the 'd' character in \"%s\"...\n", string);
-    character = strchr(string, 'd');
+    printf("Looking for the 'm' character in %s...\n", string);
+    character = strchr(string, 'm');
 
     while (character != NULL) {
         printf("found at %d\n", character - string + 1);
-        character = strchr(character + 1, 'd');
+        character = strchr(character + 1, 'm');
     }
 
     return 0;
