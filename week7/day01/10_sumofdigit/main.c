@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int whichIsBigger(int a, int b);
+char whichIsBigger(int a, int b);
 
 
 int main()
@@ -38,16 +38,15 @@ int main()
     printf("Give me an another, please: \n");
     scanf("%d", &b);
 
-    printf(whichIsBigger(a, b));
+    whichIsBigger(a, b);
 
 
     return 0;
 }
 
-int whichIsBigger(int a, int b)
+char whichIsBigger(int a, int b)
 {
     int sumA = 0, sumB = 0, number;
-
 
     while (a != 0) {
         number = a % 10;
