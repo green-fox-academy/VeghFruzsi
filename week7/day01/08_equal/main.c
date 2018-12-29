@@ -11,10 +11,10 @@ int main()
 
     int a;
     int b;
-    printf("Give me a numbers: \n");
+    printf("Give me a number: \n");
     scanf("%d", &a);
 
-    printf("Give me an another numbers: \n");
+    printf("Give me an another number: \n");
     scanf("%d", &b);
 
     printf("%d", equal (a, b));
