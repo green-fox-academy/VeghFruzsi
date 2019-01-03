@@ -8,12 +8,15 @@
 
 int main()
 {
-    int number = 5;
-    int * array = malloc(number * sizeof(int));
+    int size = 10;
+    int *array;
+    array = (int *) malloc( size * sizeof(int));
+    int x = 0;
 
-    for (int i = 0; i < number; ++i) {
-        int x;
-        array[i] = x;
+    for (int j = 0; j < 5; ++j) {
+        array[j] = x;
+        x++;
+        printf("%d ", array[j]);
     }
 
     free(array);

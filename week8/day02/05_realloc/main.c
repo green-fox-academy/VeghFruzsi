@@ -8,37 +8,37 @@
 
 int main()
 {
-    int x;
+    int X = 0;
     printf("Please give me a number:\n ");
-    scanf("%d", &x);
+    scanf("%d", &X);
 
-    int *array = malloc(x * sizeof(int));
+    int * array = malloc( X * sizeof(int));
 
-    printf("Please give me numbers:\n ");
+    printf("Than give me numbers:\n ");
 
-    for (int i = 0; i < x; ++i) {
-        int fill_array = 0;
-        scanf("%d", &fill_array);
-        array[i] = fill_array;
+    //FILL
+    for (int i = 0; i < X; i++){
+        int temp_array = 0;
+        scanf("%d", &temp_array);
+        array[i] = temp_array;
     }
 
-    int sum = 0;
-    for (int j = 0; j < x; ++j) {
-        sum += array[j];
+    //SUM
+    int SUM = 0;
+    for (int m = 0; m < X; ++m) {
+        SUM += array[m];
     }
-    printf("The sum of your numbers: %d\n", sum);
+    printf("Sum of your numbers is: %d\n", SUM);
 
-    printf("Please fill your array: \n", sum);
-    for (int k = x; k < sum; ++k) {
-        int fill_array = 0;
-        scanf("%d", &fill_array);
-        array[k] = fill_array;
+    printf("Your numbers is the array: ");
+    array = realloc(array, SUM * sizeof(int));
+
+    for (int n = 1; n <= SUM; ++n) {
+        array[n-1] = n;
+        printf("%d, ", array[n-1]);
     }
 
-    printf("Your numbers in the array: \n", sum);
-    for (int l = 0; l < sum; ++l) {
-        printf("%d, ", array[l]);
-    }
+    free(array);
 
     return 0;
 }
