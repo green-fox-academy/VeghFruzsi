@@ -16,8 +16,13 @@ int main()
     char* c = "";
     char* d = "";
 
-    printf("With added strings: %s\n", concrate_strings(a, b));
-    printf("With empty strings: %s\n", concrate_strings(c, d));
+    char * end = concrate_strings(a, b);
+    char * end_empty = concrate_strings(c, d);
+    printf("With added strings: %s\n", end);
+    printf("With empty strings: %s\n", end_empty);
+
+    free(end);
+    free(end_empty);
 
     return 0;
 }
@@ -33,9 +38,7 @@ char* concrate_strings(char* string_1, char* string_2){
 
         if (strlen(result) == 0){
             return "This is an empty string.\n";
-        } else {
-            return result;
         }
     }
-    free(result);
+    return result;
 }
